@@ -4,7 +4,6 @@ import styled from 'styled-components'
 
 function App() {
   const [id, setId] = useState<null | string>(null)
-  console.log(id)
 
   return (
     <Wrapper>
