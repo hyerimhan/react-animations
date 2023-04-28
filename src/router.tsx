@@ -20,7 +20,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        path: '/home',
+        path: '/',
         element: <Home />,
       },
       { path: '/basic', element: <BasicAnimations /> },
@@ -35,3 +35,5 @@ const router = createBrowserRouter([
     ],
   },
 ])
+
+export default router
