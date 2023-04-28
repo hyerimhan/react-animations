@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const Modal = () => {
   const [id, setId] = useState<null | string>(null)
-  console.log(id)
 
   return (
     <Wrapper>
