@@ -12,7 +12,7 @@ function App() {
 
 export default App
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
