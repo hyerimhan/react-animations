@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
+import { Wrapper } from '../App'
 
 const Etc = () => {
   const [clicked, setClicked] = useState(false)
@@ -28,10 +29,6 @@ const Etc = () => {
 }
 
 export default Etc
-
-const Wrapper = styled(motion.div)`
-  display: flex;
-`
 
 const Box = styled(motion.div)`
   width: 400px;
