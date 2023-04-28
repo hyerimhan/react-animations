@@ -1,24 +1,20 @@
-import { click } from '@testing-library/user-event/dist/click'
-import { motion } from 'framer-motion'
-import React, { useRef } from 'react'
+import { motion, useMotionValue } from 'framer-motion'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 
 function App() {
-  const biggerBoxRef = useRef<HTMLDivElement>(null)
+  const x = useMotionValue(0)
+  useEffect(() => {
+    x.onChange(() => console.log(x.get()))
+  }, [])
   return (
     <Wrapper>
-      <BiggerBox ref={biggerBoxRef}>
-        <Box
-          drag
-          dragSnapToOrigin
-          dragElastic={0.5}
-          dragConstraints={biggerBoxRef}
-          variants={BoxVariants}
-          whileHover='hover'
-          whileDrag='drag'
-          whileTap='click'
-        />
-      </BiggerBox>
+      <button onClick={() => x.set(200)}>Click Me</button>
+      <Box
+        style={{ x }}
+        drag='x'
+        dragSnapToOrigin
+      />
     </Wrapper>
   )
 }
@@ -31,17 +27,6 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`
-
-const BiggerBox = styled.div`
-  width: 600px;
-  height: 600px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* overflow: hidden; */
 `
 
 const Box = styled(motion.div)`
