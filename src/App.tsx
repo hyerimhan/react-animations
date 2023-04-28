@@ -4,24 +4,28 @@ import styled from 'styled-components'
 
 function App() {
   const [visible, setVisible] = useState(1)
-  const nextPlease = () => setVisible((prev) => (prev === 10 ? 10 : prev + 1))
-  const prevPlease = () => setVisible((prev) => (prev === 1 ? 1 : prev - 1))
+  const [back, setBack] = useState(false)
+  const nextPlease = () => {
+    setBack(false)
+    setVisible((prev) => (prev === 10 ? 10 : prev + 1))
+  }
+  const prevPlease = () => {
+    setBack(true)
+    setVisible((prev) => (prev === 1 ? 1 : prev - 1))
+  }
   return (
     <Wrapper>
-      <AnimatePresence>
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) =>
-          i === visible ? (
-            <Box
-              variants={BoxVariants}
-              initial='inVisible'
-              animate='visible'
-              exit='leaving'
-              key={i}
-            >
-              {i}
-            </Box>
-          ) : null
-        )}
+      <AnimatePresence custom={back}>
+        <Box
+          custom={back}
+          variants={BoxVariants}
+          initial='entry'
+          animate='center'
+          exit='leaving'
+          key={visible}
+        >
+          {visible}
+        </Box>
       </AnimatePresence>
       <button onClick={prevPlease}>prev</button>
       <button onClick={nextPlease}>next</button>
@@ -56,25 +60,25 @@ const Box = styled(motion.div)`
 `
 
 const BoxVariants = {
-  inVisible: {
-    x: 500,
+  entry: (isBack: boolean) => ({
+    x: isBack ? -500 : 500,
     opacity: 0,
     scale: 0,
-  },
-  visible: {
+  }),
+  center: {
     x: 0,
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 1,
+      duration: 0.3,
     },
   },
-  leaving: {
-    x: -500,
+  leaving: (isBack: boolean) => ({
+    x: isBack ? 500 : -500,
     opacity: 0,
     scale: 0,
     transition: {
-      duration: 1,
+      duration: 0.3,
     },
-  },
+  }),
 }
