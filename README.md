@@ -18,14 +18,14 @@
 
 ## :book: 학습 내용
 
-### 1. Basic Animations
+### 1. [Basic Animations](https://github.com/hyerimhan/react-animations/blob/master/src/pages/BasicAnimations.tsx)
 
 - Framer motion 동작원리 및 기본 사용 방법
 - `/basic`페이지가 랜더링되면 애니메이션이 보입니다.
 
 ![basicAnimations](https://user-images.githubusercontent.com/64674174/235283643-fd06b7e8-8d6a-4744-8d8f-3f3db255dc97.gif)
 
-### 2. Variants
+### 2. [Variants](https://github.com/hyerimhan/react-animations/blob/master/src/pages/Variants.tsx)
 
 - 깔끔한 코드와 유지보수성 좋은 Variants 동작원리 및 기본 사용 방법
 - `/variants`페이지가 랜더링되면 애니메이션이 보입니다.
@@ -34,7 +34,7 @@
 
 ![variants](https://user-images.githubusercontent.com/64674174/235283706-a4a0d993-92d2-4f81-a449-4bd559dca831.gif)
 
-### 3. Gesture
+### 3. [Gesture](https://github.com/hyerimhan/react-animations/blob/master/src/pages/Gestures.tsx)
 
 - Framer motion의 `drag-`와 `while-`의 관련된 속성 동작원리 및 기본 사용 방법
 - `/gestures`페이지가 랜더링되고 가운데 흰색 네모도형을 드래그합니다.
@@ -43,7 +43,7 @@
 
 ![gesture](https://user-images.githubusercontent.com/64674174/235283767-6586fc23-1220-4193-9a11-55405b4b030c.gif)
 
-### 4. Motion values
+### 4. [Motion values](https://github.com/hyerimhan/react-animations/blob/master/src/pages/MotionValues.tsx)
 
 - Framer motion의 `useMotionValue`, `useTransform`와 `useViewportScroll`의 관련된 속성 동작원리 및 기본 사용 방법
 - `/motionValues`페이지가 랜더링되고 가운데 흰색 네모도형을 좌우로 드래그하거나, 상하로 스크롤합니다.
@@ -51,17 +51,17 @@
 
 ![motionValue](https://user-images.githubusercontent.com/64674174/235284696-660b78f0-abba-4388-b4b0-0c5f9d2d9abd.gif)
 
-### 5. SVG Animation
+### 5. [SVG Animation](https://github.com/hyerimhan/react-animations/blob/master/src/pages/SVGAnimation.tsx)
 
 - SVG animation을 사용하기위한 `motion.path` 동작원리 및 기본 사용 방법
 - `/svgAnimation`페이지가 랜더링되면 SVG 아이콘의 애니메이션이 보입니다.
 - 원하는 개체에 따로 애니메이션을 설정할 수 있습니다.
   - `default`: 기본 설정 애니메이션 (전체)
   - `fill`: 원하는 개체에 설정한 애니메이션
-  
+
 ![SVGAnimation](https://user-images.githubusercontent.com/64674174/235284744-5cba5212-4883-4019-b047-528e2c797449.gif)
 
-### 6. AnimatePresence
+### 6. [AnimatePresence](https://github.com/hyerimhan/react-animations/blob/master/src/pages/AnimatePresence.tsx)
 
 - Framer motion의 `AnimatePresence`의 동작원리 및 기본 사용 방법
 - `/animationPresence`페이지가 랜더링되고 가운데 'click'버튼을 클릭하면 애니메이션이 보입니다.
@@ -73,7 +73,7 @@
 
 ![animatePresence](https://user-images.githubusercontent.com/64674174/235284821-4c98e7a6-d27e-417c-980c-b12410c63ce3.gif)
 
-### 7. Slider
+### 7. [Slider](https://github.com/hyerimhan/react-animations/blob/master/src/pages/Slider.tsx)
 
 - Framer motion를 활용한 슬라이더
 - `/slider`페이지가 랜더링되고 가운데 'prev', 'next' 버튼을 클릭하면 애니메이션이 보입니다.
@@ -82,7 +82,7 @@
 
 ![slider](https://user-images.githubusercontent.com/64674174/235284877-abeef5ea-de02-4bec-9235-e585b781882a.gif)
 
-### 8. Modal
+### 8. [Modal](https://github.com/hyerimhan/react-animations/blob/master/src/pages/Modal.tsx)
 
 - Framer motion를 활용한 팝업 모달창
 - `/modal`페이지가 랜더링되고 가운데 박스들을 하나하나 클릭하면 해당박스 애니메이션이 보입니다.
@@ -90,12 +90,11 @@
 
 ![modal](https://user-images.githubusercontent.com/64674174/235284947-e7b38421-c5c6-4f9d-8da2-22c4609aaab5.gif)
 
-### 9. Etc
+### 9. [Etc](https://github.com/hyerimhan/react-animations/blob/master/src/pages/Etc.tsx)
 
 - Framer motion의 `layoutId`를 활용한 애니메이션
 - `/etc`페이지가 랜더링되고 아무데나 클릭하면 모양이 바뀌며 각각의 박스를 넘나들며 이동하는 파란 원이 보입니다.
 - 애니메이션을 적용할 요소에 같은 `layoutId`줍니다.
   - HTML의 `<input id="inputId"/>`와 `<label for="inputId"></label>`나 `input`의 `name`과 비슷한 역할을 합니다.
-  
-![etc](https://user-images.githubusercontent.com/64674174/235285019-8d453c20-335b-4bde-b20c-46e5f3811d1d.gif)
 
+![etc](https://user-images.githubusercontent.com/64674174/235285019-8d453c20-335b-4bde-b20c-46e5f3811d1d.gif)
