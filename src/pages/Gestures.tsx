@@ -30,7 +30,7 @@ const BiggerBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* overflow: hidden; */
+  overflow: hidden;
 `
 
 const Box = styled(motion.div)`
